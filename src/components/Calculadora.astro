@@ -51,13 +51,6 @@
         </div>
       </div>
 
-      <button
-        id="btn-calcular"
-        class="w-full bg-[#C4461A] text-[#FEF3E2] font-bold text-base rounded-full py-4 cursor-pointer hover:bg-[#A83A15] active:scale-[0.98] transition-all"
-      >
-        Calcular
-      </button>
-
       <p class="text-xs text-[#8C8782] text-center">
         Receta del norte de México · 1 parte harina · 1.5 partes agua
       </p>
@@ -102,7 +95,6 @@
 <script>
   const inputTortillas = document.getElementById("num-tortillas") as HTMLInputElement;
   const inputPeso = document.getElementById("peso-tortilla") as HTMLInputElement;
-  const btnCalcular = document.getElementById("btn-calcular");
   const resultadoHarina = document.getElementById("resultado-harina");
   const resultadoAgua = document.getElementById("resultado-agua");
 
@@ -117,7 +109,6 @@
     resultadoAgua!.textContent = agua.toString();
   }
 
-  btnCalcular?.addEventListener("click", calcular);
   inputTortillas?.addEventListener("input", calcular);
   inputPeso?.addEventListener("input", calcular);
 
